@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Shield,
   Sword,
   Zap,
   Facebook,
   Instagram,
-  MessageCircle, // WhatsApp ke liye correct icon
+  MessageCircle,
   Crown,
   Star,
   Target,
@@ -24,9 +24,9 @@ const players = [
     tag: "C",
     image: "teamjersey.png",
     social: {
-      facebook: "https://www.facebook.com/profile.php?id=100085657555471",
-      instagram: "https://www.instagram.com/a.__k__t?igsh=eTZqZ2J1MnV0OWc2",
-      whatsapp: "916204507394", // Sirf number likhein
+      facebook: "www.facebook.com",
+      instagram: "www.instagram.com",
+      whatsapp: "916204507394",
     },
   },
   {
@@ -40,9 +40,8 @@ const players = [
     tag: "VC",
     image: "Aman.jpeg",
     social: {
-      facebook: "https://www.facebook.com/profile.php?id=100038367846305",
-      instagram:
-        "https://www.instagram.com/pandit_aman.27?igsh=ZGd2cmtwM3E1cHdt",
+      facebook: "www.facebook.com",
+      instagram: "www.instagram.com",
       whatsapp: "916200067331",
     },
   },
@@ -57,9 +56,8 @@ const players = [
     effect: "ORANGE",
     image: "rajas.jpeg",
     social: {
-      facebook: "https://www.facebook.com/raja.ranjeet.5201",
-      instagram:
-        "https://www.instagram.com/raja_5201_?igsh=MWpqa3VqdzU3bzA1Mw==",
+      facebook: "www.facebook.com",
+      instagram: "www.instagram.com",
       whatsapp: "916204398138",
     },
   },
@@ -75,8 +73,8 @@ const players = [
     effect: "RED",
     image: "Shreeom.jpeg",
     social: {
-      facebook: "https://www.facebook.com/shreeom.tiwary.2025",
-      instagram: "https://www.instagram.com/tiwary_ji_9?igsh=b2VrZ2x5MHBrdHFh",
+      facebook: "www.facebook.com",
+      instagram: "www.instagram.com",
       whatsapp: "919264404720",
     },
   },
@@ -89,7 +87,7 @@ const players = [
     jerseyimg: "jersy18.jpeg",
     jerseyBg: "bg-green-500",
     effect: "ORANGE",
-    image: "",
+    image: "#", 
     social: { facebook: "", instagram: "#", whatsapp: "919229967592" },
   },
   {
@@ -104,8 +102,7 @@ const players = [
     image: "PrinceT.jpeg",
     social: {
       facebook: "#",
-      instagram:
-        "https://www.instagram.com/princetiwari9901?igsh=MXkwdm8wZzFtZmV4cQ==",
+      instagram: "www.instagram.com",
       whatsapp: "917079640890",
     },
   },
@@ -194,7 +191,7 @@ const players = [
     social: { facebook: "#", instagram: "#", whatsapp: "917667470104" },
   },
   {
-    id: 13,
+    id: 14,
     name: "AVINASH",
     lastName: "KUMAR TIWARI",
     role: "BATSMAN",
@@ -202,42 +199,43 @@ const players = [
     jerseyimg: "jersy72.jpeg",
     jerseyBg: "bg-blue-500",
     effect: "ORANGE",
-    image: "",
+    image: "# ",
     social: { facebook: "#", instagram: "#", whatsapp: "917667470104" },
   },
 ];
 
-/* ================= PLAYER CARD ================= */
+/* ================= PLAYER CARD COMPONENT ================= */
 const PlayerCard = ({ player }) => {
+  const [isJerseyVisible, setIsJerseyVisible] = useState(false);
   const role = player.role.toUpperCase();
+
+  const handleToggle = () => setIsJerseyVisible(!isJerseyVisible);
 
   let cardTheme =
     "from-orange-600 via-orange-400 to-transparent shadow-[0_0_25px_rgba(255,165,0,0.4)]";
-
-  if (player.tag === "C") {
+  if (player.tag === "C")
     cardTheme =
       "from-yellow-500 via-yellow-200 to-yellow-600 shadow-[0_0_35px_rgba(234,179,8,0.6)]";
-  } else if (player.tag === "VC") {
+  else if (player.tag === "VC")
     cardTheme =
       "from-slate-400 via-slate-100 to-slate-500 shadow-[0_0_35px_rgba(226,232,240,0.5)]";
-  } else if (player.effect === "RED" || player.tag === "WK") {
+  else if (player.effect === "RED" || player.tag === "WK")
     cardTheme =
       "from-red-600 via-red-400 to-red-800 shadow-[0_0_35px_rgba(220,38,38,0.7)]";
-  }
 
   return (
     <div
       className={`relative w-full max-w-md p-[2px] rounded-3xl bg-gradient-to-br ${cardTheme} transition-all duration-500 group`}
     >
       <div className="bg-[#0b132b] rounded-[22px] p-6 text-white relative h-full">
-        {/* ---- ROLE ICON ---- */}
+        {/* Role Icon */}
         <div className="absolute -top-1 -right-1 z-20">
-          {role === "BOWLER" && (
+          {role.includes("BOWLER") && (
             <div className="w-12 h-12 bg-red-600 rounded-full border-2 border-red-400 flex items-center justify-center rotate-12">
               <Target size={20} />
             </div>
           )}
-          {role === "BATSMAN" && (
+          {role.includes("BATSMAN") && (
             <div className="w-12 h-12 bg-yellow-500 rounded-full border-2 border-yellow-200 flex items-center justify-center -rotate-12">
               <Sword size={22} className="text-black" />
             </div>
@@ -247,7 +245,7 @@ const PlayerCard = ({ player }) => {
               <Zap size={22} className="animate-pulse" />
             </div>
           )}
-          {(role === "WICKET KEEPER" || player.tag === "WK") && (
+          {(role.includes("KEEPER") || player.tag === "WK") && (
             <div className="w-12 h-12 bg-orange-500 rounded-full border-2 border-orange-200 flex items-center justify-center">
               <Shield size={22} />
             </div>
@@ -265,97 +263,80 @@ const PlayerCard = ({ player }) => {
             <p className="text-[10px] text-gray-400 tracking-widest uppercase mb-4">
               {player.style}
             </p>
-
-            <div className="flex flex-col gap-2 items-start">
-              <div className="inline-flex items-center gap-2 bg-[#1c2541] px-3 py-1 rounded-md border border-white/10">
-                <span className="text-[10px] font-bold uppercase text-blue-400">
-                  {player.role}
-                </span>
-              </div>
-
-              {player.tag === "C" && (
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase bg-gradient-to-r from-yellow-600 to-yellow-400 text-black shadow-lg">
-                  <Crown size={12} /> Captain
-                </div>
-              )}
-              {player.tag === "VC" && (
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase bg-gradient-to-r from-slate-400 to-slate-200 text-black shadow-lg">
-                  <Star size={12} /> Vice Captain
-                </div>
-              )}
-              {player.tag === "WK" && (
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase bg-red-600 text-white shadow-lg border border-red-400">
-                  <Shield size={12} /> Wicket Keeper
-                </div>
-              )}
+            <div className="inline-flex items-center gap-2 bg-[#1c2541] px-3 py-1 rounded-md border border-white/10">
+              <span className="text-[10px] font-bold uppercase text-blue-400">
+                {player.role}
+              </span>
             </div>
           </div>
 
-          <div className="relative w-32 h-32 rounded-full border-[3px] border-white/10 overflow-hidden bg-[#1c2541] shrink-0">
+          {/* Interactive Image Section */}
+          <div
+            className="relative w-32 h-32 cursor-pointer transition-transform duration-300 active:scale-95"
+            onClick={handleToggle}
+          >
             <img
-              src={player.image}
+              src={
+                isJerseyVisible
+                  ? player.jerseyimg
+                  : player.image || "teamjersey.png"
+              }
               alt={player.name}
-              className="w-full h-full  transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-full object-cover rounded-xl border-2 border-white/20 shadow-lg"
             />
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <span
-                className={`w-full h-full flex items-center justify-center text-white text-4xl   bg-opacity-90`}
-              >
-               <img
-               src={player.jerseyimg}
-               alt={player.name}
-               className=""
-               
-               >
-               </img>
-              </span>
+            <div className="absolute -bottom-2 -left-2 bg-black/60 backdrop-blur-sm text-[8px] px-2 py-1 rounded-md border border-white/10">
+              {isJerseyVisible ? "JERSEY" : "PHOTO"}
             </div>
           </div>
         </div>
 
-        {/* --- SOCIAL SECTION WITH WHATSAPP --- */}
-        <div className="flex items-center justify-start mt-10 mb-2 px-1 gap-4">
-          <a
-            href={player.social.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 bg-white/5 rounded-full hover:bg-blue-600 hover:scale-110 transition-all border border-white/5"
-          >
-            <Facebook size={18} />
-          </a>
-          <a
-            href={player.social.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 bg-white/5 rounded-full hover:bg-pink-600 hover:scale-110 transition-all border border-white/5"
-          >
-            <Instagram size={18} />
-          </a>
-
-          {/* WhatsApp Message Link */}
-          <a
-            href={`https://wa.me/${player.social.whatsapp}?text=Hello%20${player.name},%20kaise%20ho?`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 bg-white/5 rounded-full hover:bg-green-600 hover:scale-110 transition-all border border-white/5 text-white"
-          >
-            <MessageCircle size={18} />
-          </a>
+        {/* Social Icons */}
+        <div className="flex gap-4 mt-6 border-t border-white/5 pt-4">
+          {player.social.facebook && (
+            <a
+              href={player.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition-colors"
+            >
+              <Facebook size={18} />
+            </a>
+          )}
+          {player.social.instagram && (
+            <a
+              href={player.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-pink-500 transition-colors"
+            >
+              <Instagram size={18} />
+            </a>
+          )}
+          {player.social.whatsapp && (
+            <a
+              href={`wa.me{player.social.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-green-500 transition-colors"
+            >
+              <MessageCircle size={18} />
+            </a>
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-/* ================= CARD LIST ================= */
-const CardList = () => {
+/* ================= MAIN APP COMPONENT ================= */
+export default function TeamGrid() {
   return (
-    <div className="w-full min-h-screen bg-[#050a18] flex flex-wrap gap-8 justify-center items-center py-20 px-4">
-      {players.map((p) => (
-        <PlayerCard key={p.id} player={p} />
-      ))}
+    <div className="min-h-screen bg-[#0b132b] p-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {players.map((player) => (
+          <PlayerCard key={player.id} player={player} />
+        ))}
+      </div>
     </div>
   );
-};
-
-export default CardList;
+}
