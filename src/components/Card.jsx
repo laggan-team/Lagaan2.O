@@ -19,10 +19,10 @@ const players = [
     lastName: "KUMAR TIWARY",
     role: "BOWLER",
     style: "RIGHT ARM MEDIUM",
-    jerseyimg: "./jersy7.jpeg",
+    jerseyimg: "jersy7.jpeg",
     jerseyBg: "bg-yellow-500",
     tag: "C",
-    image: "./teamjersey.png",
+    image: "teamjersey.png",
     social: {
       facebook: "https://www.facebook.com/profile.php?id=100085657555471",
       instagram: "https://www.instagram.com/a.__k__t?igsh=eTZqZ2J1MnV0OWc2",
@@ -35,10 +35,10 @@ const players = [
     lastName: "TIWARI",
     role: "BATSMAN",
     style: "RIGHT HAND BATSMAN",
-    jerseyimg: "/jersy27.jpeg",
+    jerseyimg: "jersy27.jpeg",
     jerseyBg: "bg-red-500",
     tag: "VC",
-    image: "/Aman.jpeg",
+    image: "Aman.jpeg",
     social: {
       facebook: "https://www.facebook.com/profile.php?id=100038367846305",
       instagram:
@@ -52,10 +52,10 @@ const players = [
     lastName: "CHAUDHARY",
     role: "BATSMAN",
     style: "RIGHT HAND BATSMAN",
-    jerseyimg: "/jersy32.jpeg",
+    jerseyimg: "jersy32.jpeg",
     jerseyBg: "bg-green-500",
     effect: "ORANGE",
-    image: "/rajas.jpeg",
+    image: "rajas.jpeg",
     social: {
       facebook: "https://www.facebook.com/raja.ranjeet.5201",
       instagram:
@@ -73,7 +73,7 @@ const players = [
     jerseyBg: "bg-orange-500",
     tag: "WK",
     effect: "RED",
-    image: "/Shreeom.jpeg",
+    image: "Shreeom.jpeg",
     social: {
       facebook: "https://www.facebook.com/shreeom.tiwary.2025",
       instagram: "https://www.instagram.com/tiwary_ji_9?igsh=b2VrZ2x5MHBrdHFh",
@@ -101,7 +101,7 @@ const players = [
     jerseyimg: "jersy33.jpeg",
     jerseyBg: "bg-green-500",
     effect: "ORANGE",
-    image: "/PrinceT.jpeg",
+    image: "PrinceT.jpeg",
     social: {
       facebook: "#",
       instagram:
@@ -115,10 +115,10 @@ const players = [
     lastName: "PASWAN",
     role: "BOWLER",
     style: "SPINNER",
-    jerseyimg: "/jersy3.jpeg",
+    jerseyimg: "jersy3.jpeg",
     jerseyBg: "bg-green-500",
     effect: "ORANGE",
-    image: "/Akash.jpeg",
+    image: "Akash.jpeg",
     social: { facebook: "#", instagram: "#", whatsapp: "919798229482" },
   },
   {
@@ -130,7 +130,7 @@ const players = [
     jerseyimg: "jersy1.jpeg",
     jerseyBg: "bg-green-500",
     effect: "ORANGE",
-    image: "/Pawan.jpeg",
+    image: "Pawan.jpeg",
     social: { facebook: "#", instagram: "#", whatsapp: "919798640509" },
   },
   {
@@ -142,7 +142,7 @@ const players = [
     jerseyimg: "jersy17.jpeg",
     jerseyBg: "bg-green-500",
     effect: "ORANGE",
-    image: "/Noor.jpeg",
+    image: "Noor.jpeg",
     social: { facebook: "#", instagram: "#", whatsapp: "916209601787" },
   },
   {
@@ -154,7 +154,7 @@ const players = [
     jerseyimg: "jersy10.jpeg",
     jerseyBg: "bg-green-500",
     effect: "ORANGE",
-    image: "/Anup.jpeg",
+    image: "Anup.jpeg",
     social: { facebook: "#", instagram: "#", whatsapp: "919214708343" },
   },
   {
@@ -166,7 +166,7 @@ const players = [
     jerseyimg: "jersy45.jpeg",
     jerseyBg: "bg-blue-500",
     effect: "ORANGE",
-    image: "/Shubham.jpeg",
+    image: "Shubham.jpeg",
     social: { facebook: "#", instagram: "#", whatsapp: "917369947588" },
   },
   {
@@ -175,10 +175,10 @@ const players = [
     lastName: "TIWARI",
     role: "BOWLER",
     style: " RIGHT ARM MEDIUM",
-    jerseyimg: "./jersy47.jpeg",
+    jerseyimg: ".jersy47.jpeg",
     jerseyBg: "bg-blue-500",
     effect: "ORANGE",
-    image: "./ranjeet.jpeg",
+    image: "ranjeet.jpeg",
     social: { facebook: "#", instagram: "#", whatsapp: "917970439095" },
   },
   {
@@ -187,10 +187,10 @@ const players = [
     lastName: "TIWARI",
     role: "BATSMAN",
     style: " RIGHT ARM BATSMAN",
-    jerseyimg: "./jersy25.jpeg",
+    jerseyimg: "jersy25.jpeg",
     jerseyBg: "bg-blue-500",
     effect: "ORANGE",
-    image: "./Amit.jpeg",
+    image: "Amit.jpeg",
     social: { facebook: "#", instagram: "#", whatsapp: "917667470104" },
   },
   {
@@ -199,7 +199,7 @@ const players = [
     lastName: "KUMAR TIWARI",
     role: "BATSMAN",
     style: " LEFT ARM BATSMAN",
-    jerseyimg: "./jersy72.jpeg",
+    jerseyimg: "jersy72.jpeg",
     jerseyBg: "bg-blue-500",
     effect: "ORANGE",
     image: "",
