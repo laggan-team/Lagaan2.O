@@ -14,8 +14,7 @@ const App = () => {
         {/* BACKGROUND IMAGE */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          // App.jsx line 17 badlein:
-style={{ backgroundImage: "url('./ground1.jpg')" }}
+          style={{ backgroundImage: "url('ground1.jpg')" }}
         />
 
         {/* DARK OVERLAY - Classes fixed to remove errors */}
