@@ -5,13 +5,13 @@ const Gallery = () => {
   const winningMoments = [
     {
       id: 1,
-      src: "/sonaharcup.jpeg",
+      src: "sonaharcup.jpeg",
       title: "Runner Up Trophy",
       victory: "BHADRASHILA",
     },
     {
       id: 2,
-      src: "/doriyao cup.jpeg",
+      src: "doriyao cup.jpeg",
       title: "Runner Up Trophy",
       victory: "DORIAWAN",
     },
@@ -26,32 +26,32 @@ const Gallery = () => {
   const memories = [
     {
       id: 4,
-      src: "/doriyao.jpeg",
+      src: "doriyao.jpeg",
       title: "Award Night",
     },
     {
       id: 5,
-      src: "/Ashishtr.jpeg",
+      src: "Ashishtr.jpeg",
       title: "Ashish",
     },
     {
       id: 6,
-      src: "/Groupphoto.jpeg",
+      src: "Groupphoto.jpeg",
       title: "Group Photo",
     },
     {
       id: 7,
-      src: "/Rajatr.jpeg",
+      src: "Rajatr.jpeg",
       title: "Raja",
     },
     {
       id: 8,
-      src: "/2023team.jpeg",
+      src: "2023team.jpeg",
       title: "Anup ",
     },
     {
       id: 9,
-      src: "/Prince.jpeg",
+      src: "Prince.jpeg",
       title: "Prince",
     },
   ];
