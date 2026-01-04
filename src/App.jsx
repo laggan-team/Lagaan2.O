@@ -9,7 +9,7 @@ import About from "./components/About";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Lagaan2.O/">
       <div className="relative w-full min-h-screen text-white overflow-hidden bg-black">
         {/* BACKGROUND IMAGE */}
         <div
