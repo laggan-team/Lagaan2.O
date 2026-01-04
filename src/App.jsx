@@ -9,12 +9,12 @@ import About from "./components/About";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Lagaan2.O/">
       <div className="relative w-full min-h-screen text-white overflow-hidden bg-black">
         {/* BACKGROUND IMAGE */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/ground1.jpg')" }}
+          style={{ backgroundImage: "url('ground1.jpg')" }}
         />
 
         {/* DARK OVERLAY - Classes fixed to remove errors */}

@@ -22,7 +22,7 @@ const About = () => {
             {/* Coach Image with Team Branding */}
             <div className="w-full h-[550px] bg-[#0b132b] rounded-3xl shadow-2xl overflow-hidden relative group border-4 border-white">
               <img
-                src="/Santosh.jpeg"
+                src="Santosh.jpeg"
                 alt="Head Coach Santosh"
                 className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
               />

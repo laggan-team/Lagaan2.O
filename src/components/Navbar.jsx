@@ -167,7 +167,7 @@ const Navbar = () => {
                 <div className="flex flex-col items-center">
                   <div className="bg-white p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-xl ring-4 ring-green-500/10">
                     <img
-                      src="/QRcode.jpeg"
+                      src="QRcode.jpeg"
                       alt="Payment QR"
                       className="w-28 h-28 sm:w-36 sm:h-36"
                     />

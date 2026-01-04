@@ -39,7 +39,7 @@ const body = () => {
           <div className="absolute w-[70%] h-[70%] bg-yellow-500/30 blur-3xl rounded-full"></div>
 
           <img
-            src="/Cup.png"
+            src="Cup.png"
             alt="Laggan Trophy"
             className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[500px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] hover:scale-105 transition duration-500"
           />
